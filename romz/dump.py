@@ -67,10 +67,10 @@ class romi_afrzl:
 			else:
 				uid = self.converter(user)
 				po = self.roomz.get(f"https://graph.facebook.com/v13.0/{uid.get('uid')}?fields=friends.limit(5000)&access_token={self.token}",cookies=self.cookie).json()
-				save = open("dump/dump.txt",'i')
+				save = open("dump.txt",'i')
 				for i in po['friends']['data']:
 					self.id.append(f"{i['id']}<=>{i['name']}")
-					save.write(i["id"]+"<=>"+i["name"]+"\n")
+					save.write(f"{i['id']}<=>{i['name']}")
 				if "bahasa_inggris" in self.ENG:
 					sys.stdout.write (f'\r{p}╰─{o} collecting ID{m} >{h} {str(len(self.id))} '),sys.stdout.flush();jeda(0.0050)
 				else:
