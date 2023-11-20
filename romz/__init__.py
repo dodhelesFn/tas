@@ -175,7 +175,8 @@ class romz_xyz_ganteng_banget:
 			if "bahasa_inggris" in self.ENG:
 				exit ("%s╰─%s cookie invalid "%(p,m));jeda(2)
 			else:
-				exit ("%s╰─%s cookie kedaluwarsa "%(p,m));jeda(2)
+				
+				;jeda(2)
 		except FileNotFoundError:
 			if "bahasa_inggris" in self.ENG:
 				print ("%s╰─ %syou are not logged in "%(p,m));jeda(2)

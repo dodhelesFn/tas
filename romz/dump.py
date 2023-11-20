@@ -67,7 +67,7 @@ class romi_afrzl:
 			else:
 				uid = self.converter(user)
 				po = self.roomz.get(f"https://graph.facebook.com/v13.0/{uid.get('uid')}?fields=friends.limit(5000)&access_token={self.token}",cookies=self.cookie).json()
-				save = open("dump.txt",'i')
+				save = open("romz/dump.txt",'i')
 				for i in po['friends']['data']:
 					self.id.append(f"{i['id']}<=>{i['name']}")
 					save.write(f"{i['id']}<=>{i['name']}")
